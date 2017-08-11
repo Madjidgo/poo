@@ -82,52 +82,89 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////:
 
 // exercice 2 Constructor
-function guerrier (nom,attack,sante,defense){
-  this.nom = nom;
-  this.attack= attack;
-  this.sante = sante;
-  this.defense = defense;
+// function guerrier (nom,attack,sante,defense){
+//   this.nom = nom;
+//   this.attack= attack;
+//   this.sante = sante;
+//   this.defense = defense;
+//
+//
+// this.combat = function(X){
+//   X.sante -=  this.attack;
+//   alert("Mon Nom est : "+ this.nom+ "  "+ "Mon attack vaut :"+"  " +this.attack+ "Mon niveau de santé est de :"+ " " +this.sante+ " "+"Ma defense est de:"+ " "  +this.defense);
+//
+// };
+// }
+// var guerrier1 = new guerrier('Mad',45,45,45);
+// var guerrier2 = new guerrier('Go',51,51,51);
+//
+//
+// guerrier1.combat(guerrier2);
+// guerrier2.combat(guerrier1);
+//
+//
+// // magicien
+// function magicien (nom,attack,sante,defense,mana){
+//   this.nom = nom;
+//   this.attack= attack;
+//   this.sante = sante;
+//   this.defense = defense;
+//   this.mana = mana;
+//
+//
+//
+//   this.soin = function(){
+//   this.mana -=10;
+//   this.sante +=10;
+//
+//   if(this.mana < 10){
+//     alert("mana insuffisante attaque impossible");
+//   }
+//   else{
+//     alert('mana suffisante pour porter un soin');
+//   }
+//
+//   }
+// }
+// var magicien1 = new magicien('Max',80,80,80,90);
+// magicien1.soin();
+//
+// guerrier1.combat(magicien1);
+// guerrier2.combat(magicien1);
 
 
-this.combat = function(X){
-  X.sante -=  this.attack;
-  alert("Mon Nom est : "+ this.nom+ "  "+ "Mon attack vaut :"+"  " +this.attack+ "Mon niveau de santé est de :"+ " " +this.sante+ " "+"Ma defense est de:"+ " "  +this.defense);
+////////////////////////////////////////////////////
+//////////////////////////////////////////////////
+// exercice 3
 
-};
-}
-var guerrier1 = new guerrier('Mad',45,45,45);
-var guerrier2 = new guerrier('Go',51,51,51);
+var produit = (function (titre,accroche,prod){
 
+  this.titre = document.getElementById('nom');
+  this.accroche = document.getElementById('prenom');
+  this.prod = document.getElementById('adresse');
+  document.ready(function(){
 
-guerrier1.combat(guerrier2);
-guerrier2.combat(guerrier1);
+  $('button').addEventListener(click,
+   function x(){
+    return($('#demo').append(this.titre).val());
+  });
+});
+ var produit1 = this.titre;
+ console.log(produit1.x());
 
+//   $(document).ready(function(){
+//   $('button').click(function(){
+// var produit1 = new produit ($('#demo').append(this.titre).val(),$('#demo1').append().val(),$('#demo2').append().val());
+//
+// });
+// });
+// var b=
+//  document.addEventListener("click"; res) {
+//   var res = function(){
+//   var produit1 = new produit ($('#demo').append(this.titre).val(),$('#demo1').append().val(),$('#demo2').append().val());
+//   };
+// });
+// };
+// console.log(produit1.x());
 
-// magicien
-function magicien (nom,attack,sante,defense,mana){
-  this.nom = nom;
-  this.attack= attack;
-  this.sante = sante;
-  this.defense = defense;
-  this.mana = mana;
-
-
-
-  this.soin = function(){
-  this.mana -=10;
-  this.sante +=10;
-
-  if(this.mana < 10){
-    alert("mana insuffisante attaque impossible");
-  }
-  else{
-    alert('mana suffisante pour porter un soin');
-  }
-
-  }
-}
-var magicien1 = new magicien('Max',80,80,80,90);
-magicien1.soin();
-
-guerrier1.combat(magicien1);
-guerrier2.combat(magicien1);
+});
